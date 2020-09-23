@@ -11,3 +11,8 @@
 1. Membuat controller dapa di gunaka  printah php artisan make:controller DonationController
 2. Setalah itu kalian buat di view desain sesui yang ada inginkan, kalau anda tidak mau ribet dapat kunjungin github.com/idstck/laravel_midtrans/
 3. dimana disitu kalian bisa mengambil laman untuk view donation
+
+# Untuk membuat Fungsi Store untuk payment gatway,
+1. cek dulu strucktur untuk payment gateway dari midtrans
+2. buat methodnya untuk mengaatur request untuk inputan
+
