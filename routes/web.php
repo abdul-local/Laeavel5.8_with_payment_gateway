@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/donation','DonationController@index');
+Route::post('/donation','DonationController@store')->name('subscribe');

@@ -11,6 +11,15 @@ use Veritrans_Notification;
 
 class DonationController extends Controller
 {
+      // buat method untuk construct
+      public function __construct()
+      {
+          Veritrans_Config::$serverKey = config('services.midtrans.serverKey');
+          Veritrans_Config::$isProduction = config('services.midtrans.isProduction');
+          Veritrans_Config::$isSanitized = config('services.midtrans.isSanitized');
+          Veritrans_Config::$is3ds = config('services.midtrans.is3ds');
+      }
+      
     // buat method dengan nama index untuk mengembalikan nilai dari ke view
     public function index(){
         return view('donation');
@@ -18,6 +27,8 @@ class DonationController extends Controller
     }
     // buat method store untuk create Donation
     public function store(Request $request){
+
+      
         \DB::transaction(function() use ($request){
 
             $donation = Donation::create([
@@ -36,8 +47,8 @@ class DonationController extends Controller
     
                 ],
                 'constumer_details' => [
-                    'first_name'=>$donation->name,
-                    'email'=>$donation->email,
+                    'first_name'=>$donation->donor_name,
+                    'email'=>$donation->donor_email
     
                 ],
                 'items_details' => [
