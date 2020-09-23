@@ -6,3 +6,8 @@
 # langkah kedua kita buat model dan migration Donation
 1. jalankan printah php artisan make:model Donation -m , printah ini membuat model dengan nama donation dan membuat databse migration
 2. setelah itu buat method di model untuk set status punding, success, failed dan expire/kadaluarsa
+
+# Membuat Controller dan Halaman donasi
+1. Membuat controller dapa di gunaka  printah php artisan make:controller DonationController
+2. Setalah itu kalian buat di view desain sesui yang ada inginkan, kalau anda tidak mau ribet dapat kunjungin github.com/idstck/laravel_midtrans/
+3. dimana disitu kalian bisa mengambil laman untuk view donation
